@@ -64,7 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AnchorClone.cs" />
-    <Compile Include="Assets\rayCastTool.cs" />
+    <Compile Include="Assets\Scripts\AnchorController.cs" />
+    <Compile Include="Assets\Scripts\BouyLogic.cs" />
+    <Compile Include="Assets\Scripts\EditorController.cs" />
+    <Compile Include="Assets\Scripts\LevelScript.cs" />
+    <Compile Include="Assets\Scripts\ObjectBuilderScript.cs" />
+    <Compile Include="Assets\Scripts\rayCastTool.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
