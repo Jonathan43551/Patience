@@ -7,7 +7,7 @@ public class AnchorClone : MonoBehaviour {
     public int timeDelayReset = 63;
 
     public GameObject deletionPlane;
-    int updateDelay = 63;
+   // int updateDelay = 63;
     
     void checkDeletion()
     {

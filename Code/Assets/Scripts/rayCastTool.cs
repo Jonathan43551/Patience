@@ -6,87 +6,52 @@ using UnityEngine.UI;
 
 public class rayCastTool : MonoBehaviour
 {
-    public Rigidbody rayCastPoint_Particle;
-
-    public Rigidbody block;
-
-    public float speed = 50f;
-
     public float spawnHeight = 10;
 
-    public GameObject CreatedObjectCounterText;
+    public Rigidbody ACTIVE_rayCastPoint_Particle;
 
-    Text CreatedObjectText;
+    public Rigidbody rayCastPoint_ParticleOptionRed;
+    public Rigidbody rayCastPoint_ParticleOptionBlue;
+    public Rigidbody rayCastPoint_ParticleOptionGreen;
 
-    public int CreatedObjectCounter;
+    public Button switchParticleColorToRed;
+    public Button switchParticleColorToBlue;
+    public Button switchParticleColorToGreen;
 
-
-   // public EditorController EditorController;
-
-
-
-    void Start()
+    public void FUNCTION_switchParticleColorToRed()
     {
-
-
-        CreatedObjectText = GameObject.Find("count Text").GetComponent<Text>();
-        CreatedObjectText.text = " Count: " + CreatedObjectCounter;
+        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionRed;
     }
 
+    public void FUNCTION_switchParticleColorToBlue()
+    {
+        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionBlue;
+    }
+
+    public void FUNCTION_switchParticleColorToGreen()
+    {
+        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionGreen;
+    }
+
+    public Vector3 VECTOR3_spawnDistance;
 
     // Calls the fire method when holding down ctrl or mouse
     void Update()
     {
 
-       if (Input.GetMouseButton(0))
-       {
-            if(!rayCastPoint_Particle)
-            {
-                rayCastPoint_Particle = rigidbody.FindGameObjectWithTag("Anchor");
-
-            }
-
+        if (Input.GetMouseButton(0))
+        {
 
            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
            RaycastHit hit;
-           if (Physics.Raycast(ray, out hit, 400))
+           if (Physics.Raycast(ray, out hit, 200))
            {
-                Debug.DrawLine(ray.origin, hit.point);
-                Debug.Log(hit.transform.name);
+                //Debug.DrawLine(ray.origin, hit.point);
+                //Debug.Log(hit.transform.name);
 
-      //          if (hit.transform.name == "RestartButton")
-      //          {
-      //              EditorController.RestartGame();
-      //          }
-                //FireRocket();
-                Instantiate(rayCastPoint_Particle, hit.point, transform.rotation);
+                Instantiate(ACTIVE_rayCastPoint_Particle, (hit.point + VECTOR3_spawnDistance), transform.rotation);
 
-                CreatedObjectCounter++;
-
-                
-               
-            
             }
-    
-    
-       }
-
-
-
-        CreatedObjectText.text = " Count: " + CreatedObjectCounter;
-
-
+        }
     }
-
-
-
-
-
-    public void FreeButtonClick()
-    {
-        CreatedObjectCounter++;
-    }
-
-
-
 }

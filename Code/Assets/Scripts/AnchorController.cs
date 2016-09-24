@@ -3,12 +3,15 @@ using System.Collections;
 
 public class AnchorController : MonoBehaviour {
 
-   // public GameObject[] anchorList; 
+    // public GameObject[] anchorList; 
 
 
     //GameObject[] anchors = GameObject.FindGameObjectsWithTag("Anchor");
 
     //anchorList = new anchorList[anchors.Length];
+
+
+
 
 
     public void AnchorCheckup()
