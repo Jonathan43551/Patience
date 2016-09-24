@@ -14,16 +14,14 @@ public class rayCastTool : MonoBehaviour
 
     public float spawnHeight = 10;
 
-    public GameObject EditorControllerCreatedObjectCounter;
-
-    //CreatedObjectCounter = EditorControllerCreatedObjectCounter
+    public GameObject CreatedObjectCounterText;
 
     Text CreatedObjectText;
 
     public int CreatedObjectCounter;
 
 
-    public EditorController EditorController;
+   // public EditorController EditorController;
 
 
 
@@ -31,7 +29,7 @@ public class rayCastTool : MonoBehaviour
     {
 
 
-        CreatedObjectText = GameObject.Find("CountText").GetComponent<Text>();
+        CreatedObjectText = GameObject.Find("count Text").GetComponent<Text>();
         CreatedObjectText.text = " Count: " + CreatedObjectCounter;
     }
 
@@ -42,6 +40,13 @@ public class rayCastTool : MonoBehaviour
 
        if (Input.GetMouseButton(0))
        {
+            if(!rayCastPoint_Particle)
+            {
+                rayCastPoint_Particle = rigidbody.FindGameObjectWithTag("Anchor");
+
+            }
+
+
            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
            RaycastHit hit;
            if (Physics.Raycast(ray, out hit, 400))
@@ -49,10 +54,10 @@ public class rayCastTool : MonoBehaviour
                 Debug.DrawLine(ray.origin, hit.point);
                 Debug.Log(hit.transform.name);
 
-                if (hit.transform.name == "RestartButton")
-                {
-                    EditorController.RestartGame();
-                }
+      //          if (hit.transform.name == "RestartButton")
+      //          {
+      //              EditorController.RestartGame();
+      //          }
                 //FireRocket();
                 Instantiate(rayCastPoint_Particle, hit.point, transform.rotation);
 

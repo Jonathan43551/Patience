@@ -6,6 +6,8 @@ public class BouyLogic : MonoBehaviour
 {
     public GameObject deletionPlane;
 
+
+
     public void CheckDeleteOrUpdateName()
     {
 
@@ -27,12 +29,13 @@ public class BouyLogic : MonoBehaviour
         } else {
             //call updateName to grab the new location and use it as it's name suffix
             updateName();
+            //this.gameObject.SetActive(true);
         }
     }
 
     void updateName()
     {
-
+        
         string positionName = this.transform.position + "";
 
         string switchedNegativeName = positionName.Replace("-", "n");

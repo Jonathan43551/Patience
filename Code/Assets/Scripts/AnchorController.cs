@@ -5,10 +5,7 @@ public class AnchorController : MonoBehaviour {
 
    // public GameObject[] anchorList; 
 
-    // Update is called once per frame
-    void Update() {
-        
-        }
+
     //GameObject[] anchors = GameObject.FindGameObjectsWithTag("Anchor");
 
     //anchorList = new anchorList[anchors.Length];
@@ -21,6 +18,9 @@ public class AnchorController : MonoBehaviour {
         print("######");
 
         GameObject[] anchorGameObjects = GameObject.FindGameObjectsWithTag("Anchor");
+
+        print(anchorGameObjects.Length);
+        
 
         foreach (GameObject anchorName in anchorGameObjects)
         {
