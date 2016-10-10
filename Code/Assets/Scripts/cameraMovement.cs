@@ -11,7 +11,7 @@ public class cameraMovement : MonoBehaviour {
 
     // Update is called once per frame
     public void SliderValueChanged(float sliderValue) {
-        Debug.Log(sliderValue);
+        //Debug.Log(sliderValue);
         newYPosition = newYPosition + sliderValue;
         //Debug.Log("Y coordinate modifier: " + newYPosition);
 
@@ -25,7 +25,7 @@ public class cameraMovement : MonoBehaviour {
 
     public void ButtonHomePressed()
     {
-        Debug.Log("inside ButtonHomePressed");
+        //Debug.Log("inside ButtonHomePressed");
         mainCamera.transform.localPosition = new Vector3(
         mainCamera.transform.localPosition.x,
         homeYPosition,

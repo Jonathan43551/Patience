@@ -73,12 +73,12 @@
     <Compile Include="Assets\Scripts\AnchorController.cs" />
     <Compile Include="Assets\Scripts\BouyLogic.cs" />
     <Compile Include="Assets\Scripts\EditorController.cs" />
-    <Compile Include="Assets\Scripts\LevelScript.cs" />
     <Compile Include="Assets\Scripts\ObjectBuilderScript.cs" />
     <Compile Include="Assets\Scripts\activation.cs" />
     <Compile Include="Assets\Scripts\cameraMovement.cs" />
     <Compile Include="Assets\Scripts\exitButton.cs" />
     <Compile Include="Assets\Scripts\rayCastTool.cs" />
+    <Compile Include="Assets\Scripts\systemMovement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

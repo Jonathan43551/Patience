@@ -4,27 +4,19 @@ using System.Collections;
 
 public class BouyLogic : MonoBehaviour
 {
+    public int distanceDeletionFromCamera;
+    //public GameObject MainCamera;
 
     public void CheckDeleteOrUpdateName()
     {
-        GameObject deletionPlane = GameObject.FindGameObjectWithTag("TooCool");
+        //var vectorToTargetPlane = transform.position - checkDeletionPlane.transform.position;
+        //var vectorToTargetCamera = transform.position - checkDeletionCamera.transform.position;
 
+        GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
-
-        var vectorToTarget = transform.position - deletionPlane.transform.position;
-        
-        if (vectorToTarget.y <= .4)
+        if (Vector3.Distance(MainCamera.transform.position, this.transform.position) >= distanceDeletionFromCamera)
         {
-            //Debug.Log("attempting to delete " + this.gameObject.name);
-            Destroy(this.gameObject, 1);
-        } else if (vectorToTarget.y >= 200)
-        {
-            Destroy(this.gameObject, 1);
-        } else if (vectorToTarget.z <= -50)
-        {
-            Destroy(this.gameObject, 1);
-        } else if (Vector3.Distance(deletionPlane.transform.position, transform.position) >= 100)
-        {
+            //Debug.Log("checkDeletionCamera??");
             Destroy(this.gameObject, 1);
         } else {
             //call updateName to grab the new location and use it as it's name suffix
