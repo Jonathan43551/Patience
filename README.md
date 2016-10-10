@@ -1,9 +1,7 @@
 # Patience
-RBG block simulator that should be used with chromadepth glasses.
+A RBG block simulator built with Unity, thanks for checking it out.
 
-I am not affiliated with the folks who make them, I just wanted to share a nice experience. Oh, the bits to edit this game in unity are included in the 'code' folder if you dare... I don't have a way to gracefully exit out of the program.
-
-Good luck!
+I am not affiliated with the folks who make chromadepth glasses, if you do happen to have a pair, it can produce a pretty cool effect. Oh, the Unity Project is included in the 'code' folder if you dare to edit your experience... Good luck!
 
 ___
 
