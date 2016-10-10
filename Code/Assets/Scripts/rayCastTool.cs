@@ -34,6 +34,7 @@ public class rayCastTool : MonoBehaviour
     }
 
     public Vector3 VECTOR3_spawnDistance;
+    public int raycastDistanceMax;
 
     // Calls the fire method when holding down ctrl or mouse
     void Update()
@@ -44,7 +45,7 @@ public class rayCastTool : MonoBehaviour
 
            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
            RaycastHit hit;
-           if (Physics.Raycast(ray, out hit, 200))
+           if (Physics.Raycast(ray, out hit, raycastDistanceMax))
            {
                 //Debug.DrawLine(ray.origin, hit.point);
                 //Debug.Log(hit.transform.name);
