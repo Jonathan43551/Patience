@@ -4,33 +4,33 @@ using System.Collections;
 public class systemMovement : MonoBehaviour {
     //docs.unity3d.com/ScriptReference/Transform-localRotation.html
 
-    public Vector3 RotationINCR;
-    public Vector3 RotationDECR;
+    public Vector3 Rotationx1;
+    public Vector3 Rotationx2;
 
-    public bool plzRotateINCR;
-    public bool plzRotateDECR;
+    public bool plzRotatex1;
+    public bool plzRotatex2;
 
-    public void BooleanRotationINCR(bool plzRotate)
+    public void BooleanRotationx1(bool plzRotate)
     {
-        plzRotateINCR = plzRotate;
+        plzRotatex1 = plzRotate;
     }
 
-    public void BooleanRotationDECR(bool plzRotate)
+    public void BooleanRotationx2(bool plzRotate)
     {
-        plzRotateDECR = plzRotate;
+        plzRotatex2 = plzRotate;
     }
 
     // Update is called once per frame
     void Update () {
-        if (plzRotateINCR)
+        if (plzRotatex1)
         {
-            this.transform.Rotate(RotationINCR);
+            this.transform.Rotate(Rotationx1);
 
         }
 
-        if (plzRotateDECR)
+        if (plzRotatex2)
         {
-            this.transform.Rotate(RotationDECR);
+            this.transform.Rotate(Rotationx2);
         }
 
 

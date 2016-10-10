@@ -22,6 +22,14 @@ public class cameraMovement : MonoBehaviour {
         );
     }
 
+    public void SliderGravityValueChanged(float sliderValue)
+    {
+        Physics.gravity = new Vector3(0, sliderValue, 0);
+        Debug.Log(Physics.gravity);
+
+    }
+
+
 
     public void ButtonHomePressed()
     {
