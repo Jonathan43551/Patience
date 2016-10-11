@@ -24,8 +24,8 @@ public class cameraMovement : MonoBehaviour {
 
     public void SliderGravityValueChanged(float sliderValue)
     {
-        Physics.gravity = new Vector3(0, sliderValue, 0);
-        Debug.Log(Physics.gravity);
+        Physics.gravity = new Vector3(sliderValue, sliderValue, sliderValue);
+        //Debug.Log(Physics.gravity);
 
     }
 

@@ -20,7 +20,7 @@ public class BouyLogic : MonoBehaviour
             Destroy(this.gameObject, 1);
         } else {
             //call updateName to grab the new location and use it as it's name suffix
-            transform.TransformVector(new Vector3(0, 0, 0) - transform.position);
+            //transform.TransformVector(new Vector3(0, 0, 0) - transform.position);
             updateName();
             //this.gameObject.SetActive(true);
         }
