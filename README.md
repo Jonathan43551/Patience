@@ -1,7 +1,7 @@
 # Patience
-A RBG block simulator built with Unity, thanks for checking it out.
+A block simulator built with Unity, thanks for checking it out.
 
-I am not affiliated with the folks who make chromadepth glasses, if you do happen to have a pair, it can produce a pretty cool effect. Oh, the Unity Project is included in the 'code' folder if you dare to edit your experience... Good luck!
+Oh, the Unity Project is included in the 'code' folder if you dare to edit your experience... Good luck! I am not affiliated with the folks who make chromadepth glasses, if you do happen to have a pair, it can produce a pretty cool effect but it is not a requirement.
 
 ___
 
