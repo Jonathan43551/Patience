@@ -4,8 +4,8 @@ using System.Collections;
 public class systemMovement : MonoBehaviour {
     //docs.unity3d.com/ScriptReference/Transform-localRotation.html
 
-    public Vector3 Rotationx1;
-    public Vector3 Rotationx2;
+    public Vector3 RotationYPositive;
+    public Vector3 RotationYNegative;
 
     public bool plzRotatex1;
     public bool plzRotatex2;
@@ -24,13 +24,13 @@ public class systemMovement : MonoBehaviour {
     void Update () {
         if (plzRotatex1)
         {
-            this.transform.Rotate(Rotationx1);
+            this.transform.Rotate(RotationYPositive);
 
         }
 
         if (plzRotatex2)
         {
-            this.transform.Rotate(Rotationx2);
+            this.transform.Rotate(RotationYNegative);
         }
 
 

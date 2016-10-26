@@ -10,17 +10,30 @@ public class rayCastTool : MonoBehaviour
 
     public Rigidbody ACTIVE_rayCastPoint_Particle;
 
-    public Rigidbody rayCastPoint_ParticleOptionRed;
+    public Rigidbody rayCastPoint_ParticleOptionYellow;
     public Rigidbody rayCastPoint_ParticleOptionBlue;
     public Rigidbody rayCastPoint_ParticleOptionGreen;
 
-    public Button switchParticleColorToRed;
+    public Button switchParticleColorToYellow;
     public Button switchParticleColorToBlue;
     public Button switchParticleColorToGreen;
 
-    public void FUNCTION_switchParticleColorToRed()
+    public Button switchRayCastMode;
+
+    public GameObject workSurfacePlane;
+    public GameObject helpPanel;
+
+    public enum rayCastModeOptions
     {
-        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionRed;
+        anchor,
+        link,
+    };
+    public rayCastModeOptions activeRayCastModeOption;
+
+
+    public void FUNCTION_switchParticleColorToYellow()
+    {
+        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionYellow;
     }
 
     public void FUNCTION_switchParticleColorToBlue()
@@ -33,20 +46,60 @@ public class rayCastTool : MonoBehaviour
         ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionGreen;
     }
 
+    public void FUNCTION_switchRayCastMode()
+    {
+
+        if (activeRayCastModeOption == rayCastModeOptions.anchor)
+        {
+            activeRayCastModeOption = rayCastModeOptions.link;
+        }
+        else
+        {
+            activeRayCastModeOption = rayCastModeOptions.anchor;
+        }
+        //Debug.Log(activeRayCastModeOption);
+    }
+
+    public void FUNCTION_toggleActivationPlane()
+    {
+        if (workSurfacePlane.activeInHierarchy)
+        {
+            workSurfacePlane.SetActive(false);
+        } else
+        {
+            workSurfacePlane.SetActive(true);
+        }
+    }
+
+    public void FUNCTION_toggleActivationHelp()
+    {
+        if (helpPanel.activeInHierarchy)
+        {
+            helpPanel.SetActive(false);
+        }
+        else
+        {
+            helpPanel.SetActive(true);
+        }
+    }
+
+
     public Vector3 VECTOR3_spawnDistance;
     public int raycastDistanceMax;
 
     // Calls the fire method when holding down ctrl or mouse
     void Update()
     {
+        //Debug.Log(activeRayCastModeOption);
+        //Debug.Log(rayCastModeOptions.link);
 
         if (Input.GetMouseButton(0))
         {
 
-           Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-           RaycastHit hit;
-           if (Physics.Raycast(ray, out hit, raycastDistanceMax))
-           {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, raycastDistanceMax))
+            {
                 //Debug.DrawLine(ray.origin, hit.point);
                 //Debug.Log(hit.transform.name);
 
