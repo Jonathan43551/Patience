@@ -6,30 +6,21 @@ using UnityEngine.UI;
 
 public class rayCastTool : MonoBehaviour
 {
-    public float spawnHeight = 10;
+    // FUNCTION_triageWithCOSMO
+    public int worldIdentifier = -509;
+    public int transactionIdentifier = -500000;
+    public void FUNCTION_triageWithCOSMO(string objectLocationTriageWithCOSMO)
+    {
+        Debug.Log(worldIdentifier + "^" + transactionIdentifier + objectLocationTriageWithCOSMO);
+        transactionIdentifier++;
+    }
 
+    // FUNCTION_switchParticleColor<VARIANTS>
     public Rigidbody ACTIVE_rayCastPoint_Particle;
-
+    
     public Rigidbody rayCastPoint_ParticleOptionYellow;
     public Rigidbody rayCastPoint_ParticleOptionBlue;
     public Rigidbody rayCastPoint_ParticleOptionGreen;
-
-    public Button switchParticleColorToYellow;
-    public Button switchParticleColorToBlue;
-    public Button switchParticleColorToGreen;
-
-    public Button switchRayCastMode;
-
-    public GameObject workSurfacePlane;
-    public GameObject helpPanel;
-
-    public enum rayCastModeOptions
-    {
-        anchor,
-        link,
-    };
-    public rayCastModeOptions activeRayCastModeOption;
-
 
     public void FUNCTION_switchParticleColorToYellow()
     {
@@ -45,6 +36,14 @@ public class rayCastTool : MonoBehaviour
     {
         ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionGreen;
     }
+    
+    // FUNCTION_switchRayCastMode
+    public enum rayCastModeOptions
+    {
+        anchor,
+        link,
+    };
+    public rayCastModeOptions activeRayCastModeOption;
 
     public void FUNCTION_switchRayCastMode()
     {
@@ -59,13 +58,18 @@ public class rayCastTool : MonoBehaviour
         }
         //Debug.Log(activeRayCastModeOption);
     }
-
+    
+    // FUNCTION_toggleActivationPlane
+    public GameObject workSurfacePlane;
+    public GameObject helpPanel;
+    
     public void FUNCTION_toggleActivationPlane()
     {
         if (workSurfacePlane.activeInHierarchy)
         {
             workSurfacePlane.SetActive(false);
-        } else
+        }
+        else
         {
             workSurfacePlane.SetActive(true);
         }
@@ -82,12 +86,11 @@ public class rayCastTool : MonoBehaviour
             helpPanel.SetActive(true);
         }
     }
-
-
+    
+    // Instantiate Variables
     public Vector3 VECTOR3_spawnDistance;
-    public int raycastDistanceMax;
+    public int INT_raycastDistanceMax;
 
-    // Calls the fire method when holding down ctrl or mouse
     void Update()
     {
         //Debug.Log(activeRayCastModeOption);
@@ -95,16 +98,18 @@ public class rayCastTool : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            // This main loop which acts as the core of Patience, was copied from a fantastic tutorial that showed me how to create gameObjects
+            // https://unity3d.com/learn/tutorials/projects/survival-shooter-tutorial
+            // Learn how to make an isometric 3D survival shooter game.
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, raycastDistanceMax))
+            Ray RAY_cameraToMousePosition = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit HIT_cameraToMousePosition;
+            if (Physics.Raycast(RAY_cameraToMousePosition, out HIT_cameraToMousePosition, INT_raycastDistanceMax))
             {
-                //Debug.DrawLine(ray.origin, hit.point);
-                //Debug.Log(hit.transform.name);
+                //Debug.DrawLine(RAY_cameraToMousePosition.origin, HIT_cameraToMousePosition.point);
+                //Debug.Log(HIT_cameraToMousePosition.transform.name);
 
-                Instantiate(ACTIVE_rayCastPoint_Particle, (hit.point + VECTOR3_spawnDistance), transform.rotation);
-
+                Instantiate(ACTIVE_rayCastPoint_Particle, (HIT_cameraToMousePosition.point + VECTOR3_spawnDistance), transform.rotation);
             }
         }
     }

@@ -4,15 +4,34 @@ using System.Collections;
 
 public class BouyLogic : MonoBehaviour
 {
+
+    public GameObject rayCastTool;
+
+
+    void Start ()
+    {
+        //GameObject MainCamera = GameObject.FindGameObjectWithTag(mainCameraFindObjectsWithTag);
+       // SCRIPT_rayCastTool = MainCamera.GetComponent<>
+
+
+    }
+
+
+    //private rayCastTool SCRIPT_rayCastTool = "rayCastTool.cs";
+
+    
+
     public int distanceDeletionFromCamera;
     //public GameObject MainCamera;
 
+    public string mainCameraFindObjectsWithTag = "MainCamera";
+    
     public void CheckDeleteOrUpdateName()
     {
         //var vectorToTargetPlane = transform.position - checkDeletionPlane.transform.position;
         //var vectorToTargetCamera = transform.position - checkDeletionCamera.transform.position;
 
-        GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        GameObject MainCamera = GameObject.FindGameObjectWithTag(mainCameraFindObjectsWithTag);
 
         if (Vector3.Distance(MainCamera.transform.position, this.transform.position) >= distanceDeletionFromCamera)
         {
@@ -23,6 +42,14 @@ public class BouyLogic : MonoBehaviour
             //transform.TransformVector(new Vector3(0, 0, 0) - transform.position);
             updateName();
             //this.gameObject.SetActive(true);
+
+            //rayCastTool.sc
+
+            //MainCamera.GetComponent<rayCastTool.FUNCTION_triageWithCOSMO(this.gameObject.name)>;
+
+
+
+            //SCRIPT_rayCastTool.FUNCTION_triageWithCOSMO(this.gameObject.name);
         }
     }
 
