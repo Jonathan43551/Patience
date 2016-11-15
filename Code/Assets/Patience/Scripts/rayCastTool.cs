@@ -18,13 +18,13 @@ public class rayCastTool : MonoBehaviour
     // FUNCTION_switchParticleColor<VARIANTS>
     public Rigidbody ACTIVE_rayCastPoint_Particle;
     
-    public Rigidbody rayCastPoint_ParticleOptionYellow;
+    public Rigidbody rayCastPoint_ParticleOptionRed;
     public Rigidbody rayCastPoint_ParticleOptionBlue;
     public Rigidbody rayCastPoint_ParticleOptionGreen;
 
     public void FUNCTION_switchParticleColorToYellow()
     {
-        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionYellow;
+        ACTIVE_rayCastPoint_Particle = rayCastPoint_ParticleOptionRed;
     }
 
     public void FUNCTION_switchParticleColorToBlue()
