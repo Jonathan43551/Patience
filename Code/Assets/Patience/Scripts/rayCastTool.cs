@@ -60,18 +60,18 @@ public class rayCastTool : MonoBehaviour
     }
     
     // FUNCTION_toggleActivationPlane
-    public GameObject workSurfacePlane;
+    public GameObject workSurface;
     public GameObject helpPanel;
     
-    public void FUNCTION_toggleActivationPlane()
+    public void FUNCTION_toggleActivationWorkSurface()
     {
-        if (workSurfacePlane.activeInHierarchy)
+        if (workSurface.activeInHierarchy)
         {
-            workSurfacePlane.SetActive(false);
+            workSurface.SetActive(false);
         }
         else
         {
-            workSurfacePlane.SetActive(true);
+            workSurface.SetActive(true);
         }
     }
 
