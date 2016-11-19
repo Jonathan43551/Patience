@@ -106,9 +106,6 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Moq">
-      <HintPath>Assets\Zenject\OptionalExtras\AutoMocking\Plugins\Moq.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Code.CSharp.csproj">
@@ -117,111 +114,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Zenject\OptionalExtras\AutoMocking\Editor\TestAutoMocking.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestBindGameObject.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromComponent.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromGameObject.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromPrefab.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromPrefabResource.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromResource.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromSiblingComponent.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromSubContainerPrefab.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\Editor\TestFromSubContainerPrefabResource.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\Editor\TestBindFactory.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\Editor\TestBindFactoryFive.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\Editor\TestBindFactoryOne.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\Editor\TestGameObjectFactoryOne.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\Editor\TestGameObjectFactoryZero.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\Editor\TestPrefabFactory.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\Editor\TestInstallers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\Editor\TestMonoInstallers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\Editor\TestScriptableObjectInstallers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Util\Editor\FixtureUtil.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes2.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes3.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestNonLazy.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestRebind.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestUnbind.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\BindFeatures\TestWithArguments.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestTo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToFactory.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToGetter.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToInstance.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToMethod.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToResolve.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToSubContainerInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Bindings\TestToSubContainerMethod.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Commands\TestCommandsOne.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Commands\TestCommandsZero.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsBasic.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsComplex.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsFieldName.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsIdentifier.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsParents.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsTarget.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestConditionsTargetInstance.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conditions\TestIdentifiers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conventions\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conventions\FooMore.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conventions\TestConvention.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conventions\TestConvention2.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Conventions\TestConventionNames.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo5.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToFactory0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToFactory1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToGetter0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToInstance0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToMethod0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToMethod1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToResolve0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerInstaller0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerInstaller1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerMethod0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerMethod1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\IFactory\TestIFactory.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Factories\TestFactory.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestAllInjectionTypes.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestBaseClassPropertyInjection.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestCircularDependencies.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestConstructorInjection.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestConstructorInjectionOptional.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestDuplicateInjection.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestInjectSources.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestListInjection.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestNullableValues.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestParameters.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestPostInjectCall.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestPostInjectParameters.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestPropertyInjection.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestStructInjection.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Injection\TestTestOptional.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestCircularDependencies.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestConflictingToSingletonUses.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestCopyIntoAllSubContainers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestFacadeSubContainer.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestGenericContract.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestMisc.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestMoq.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestNestedContainer.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestResolveMany.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestSubContainers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestSubContainers4.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestTaskUpdater.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestTestUtil.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestTransientMockProvider.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\TestValidateInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Other\ZenjectProfileTest.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Signals\TestSignals.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Signals\TestSignalsOneParam.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Signals\TestSignalsSixParams.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Signals\TestSignalsWithIdentifiers.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Signals\TestTriggers1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Util\TestListComparer.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Validation\TestValidate1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\UnitTests\Editor\Validation\TestValidateFactories.cs" />
     <Compile Include="Assets\Zenject\Source\Editor\EditorWindow\GuiRenderableManager.cs" />
     <Compile Include="Assets\Zenject\Source\Editor\EditorWindow\IGuiRenderable.cs" />
     <Compile Include="Assets\Zenject\Source\Editor\EditorWindow\ZenjectEditorWindow.cs" />
@@ -239,8 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Zenject\LICENSE.txt" />
-    <None Include="Assets\Zenject\OptionalExtras\AutoMocking\Plugins\License.txt" />
-    <None Include="Assets\Zenject\OptionalExtras\UnitTests\ReadMe.txt" />
     <None Include="Assets\Zenject\Version.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

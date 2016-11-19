@@ -67,9 +67,6 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Moq">
-      <HintPath>Assets\Zenject\OptionalExtras\AutoMocking\Plugins\Moq.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Patience\Scripts\AnchorClone.cs" />
@@ -96,67 +93,6 @@
     <Compile Include="Assets\Patience\Scripts\exitButton.cs" />
     <Compile Include="Assets\Patience\Scripts\rayCastTool.cs" />
     <Compile Include="Assets\Patience\Scripts\systemMovement.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\AutoMocking\ZenjectMoqExtensions.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder2.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder3.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder4.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder5.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinderBase.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\CommandExtensions.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\Finalizers\CommandBindingFinalizer.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Binders\Finalizers\CommandBindingFinalizerBase.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Command\Command.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\ISignal.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal0.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal1.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal2.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal3.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal4.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal5.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\Signal6.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\CommandsAndSignals\Signal\SignalExtensions.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Bar.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Bob.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Gorp.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Jim.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Norf.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Norf2.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Qux.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Bar.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Bob.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Gorp.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Jim.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Norf.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Norf2.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabResource\Qux.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefab\Bar.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefab\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefab\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefab\Gorp.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefabResource\Bar.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefabResource\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefabResource\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefabResource\Gorp.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\PrefabFactory\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\TestBindFactory\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\TestBindFactoryFive\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\TestBindFactoryFive\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\TestBindFactoryOne\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\TestBindFactoryOne\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Factories\TestGameObjectFactoryOne\Foo.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestInstallers\BarInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestInstallers\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestInstallers\QuxInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestMonoInstallers\BarInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestMonoInstallers\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestMonoInstallers\QuxInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestScriptableObjectInstallers\BarInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestScriptableObjectInstallers\FooInstaller.cs" />
-    <Compile Include="Assets\Zenject\OptionalExtras\IntegrationTests\Installers\TestScriptableObjectInstallers\QuxInstaller.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\BindInfo\BindInfo.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\BindInfo\GameObjectCreationParameters.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\Binders\ArgumentsBinder.cs" />
@@ -336,8 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Zenject\LICENSE.txt" />
-    <None Include="Assets\Zenject\OptionalExtras\AutoMocking\Plugins\License.txt" />
-    <None Include="Assets\Zenject\OptionalExtras\UnitTests\ReadMe.txt" />
     <None Include="Assets\Zenject\Version.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
