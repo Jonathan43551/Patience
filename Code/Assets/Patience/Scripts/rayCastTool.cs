@@ -60,20 +60,20 @@ public class rayCastTool : MonoBehaviour
     }
     
     // FUNCTION_toggleActivationPlane
-    public GameObject workSurface;
+  //  public GameObject workSurface;
     public GameObject helpPanel;
     
-    public void FUNCTION_toggleActivationWorkSurface()
-    {
-        if (workSurface.activeInHierarchy)
-        {
-            workSurface.SetActive(false);
-        }
-        else
-        {
-            workSurface.SetActive(true);
-        }
-    }
+ //   public void FUNCTION_toggleActivationWorkSurface()
+ //   {
+ //       if (workSurface.activeInHierarchy)
+ //       {
+ //           workSurface.SetActive(false);
+ //       }
+ //       else
+ //       {
+ //           workSurface.SetActive(true);
+ //       }
+ //   }
 
     public void FUNCTION_toggleActivationHelp()
     {

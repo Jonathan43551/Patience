@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ShipHealthHandler : MonoBehaviour
 {
-    float _health = 100;
+    public float _health = 100;
 
     public void OnGUI()
     {

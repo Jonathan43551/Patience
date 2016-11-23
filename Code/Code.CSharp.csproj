@@ -73,8 +73,12 @@
     <Compile Include="Assets\Patience\Scripts\AnchorController.cs" />
     <Compile Include="Assets\Patience\Scripts\BouyLogic.cs" />
     <Compile Include="Assets\Patience\Scripts\EditorController.cs" />
-    <Compile Include="Assets\Patience\Scripts\Interfaces\GRAVITY_.cs" />
-    <Compile Include="Assets\Patience\Scripts\Interfaces\GRAVITY_INTERFACE.cs" />
+    <Compile Include="Assets\Patience\Scripts\HexCell.cs" />
+    <Compile Include="Assets\Patience\Scripts\HexCoordinates.cs" />
+    <Compile Include="Assets\Patience\Scripts\HexGrid.cs" />
+    <Compile Include="Assets\Patience\Scripts\HexMapEditor.cs" />
+    <Compile Include="Assets\Patience\Scripts\HexMesh.cs" />
+    <Compile Include="Assets\Patience\Scripts\HexMetrics.cs" />
     <Compile Include="Assets\Patience\Scripts\Interfaces\POSITION.cs" />
     <Compile Include="Assets\Patience\Scripts\Interfaces\POSITION_INTERFACE.cs" />
     <Compile Include="Assets\Patience\Scripts\Interfaces\PRUNING.cs" />
@@ -91,6 +95,10 @@
     <Compile Include="Assets\Patience\Scripts\activation.cs" />
     <Compile Include="Assets\Patience\Scripts\cameraMovement.cs" />
     <Compile Include="Assets\Patience\Scripts\exitButton.cs" />
+    <Compile Include="Assets\Patience\Scripts\gravity\GRAVITY_.cs" />
+    <Compile Include="Assets\Patience\Scripts\gravity\GRAVITY_INTERFACE.cs" />
+    <Compile Include="Assets\Patience\Scripts\gravity\GRAVITY_subContainer.cs" />
+    <Compile Include="Assets\Patience\Scripts\gravity\zenject_GRAVITY_.cs" />
     <Compile Include="Assets\Patience\Scripts\rayCastTool.cs" />
     <Compile Include="Assets\Patience\Scripts\systemMovement.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\BindInfo\BindInfo.cs" />
@@ -271,6 +279,7 @@
     <Compile Include="Assets\Zenject\Source\Validation\ValidationMarker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Patience\Materials\VertexColors.shader" />
     <None Include="Assets\Zenject\LICENSE.txt" />
     <None Include="Assets\Zenject\Version.txt" />
   </ItemGroup>
