@@ -2,35 +2,52 @@
 using System.Collections;
 
 public class GRAVITY_ : MonoBehaviour {
-    public bool ACTIVATE_addYGravity;
-    public Vector3 addY;
+    public bool addGravityOnce;
+    public Vector3 addGravityVector3;
 
-    public bool ACTIVATE_subtractYGravity;
-    public Vector3 subtractY;
+    public bool subtractGravityOnce;
+    public Vector3 subtractGravityVector3;
 
     public Vector3 latestGravity;
 
-    public void addYGravity()
+    public void addValueChanged(bool toggleValue) {
+        Debug.Log(" ... : addValueChanged : " + toggleValue);
+        addGravityOnce = toggleValue;
+    }
+
+    public void subtractValueChanged(bool toggleValue)
     {
-        if (ACTIVATE_addYGravity) {
-        Physics.gravity = Physics.gravity + addY;
-            latestGravity = Physics.gravity;
-            Debug.Log(Physics.gravity);
+        Debug.Log(" ... : subtractValueChanged : " + toggleValue);
+        subtractGravityOnce = toggleValue;
+    }
+
+    public void addGravity()
+    {
+        if (addGravityOnce) {
+        Physics.gravity = Physics.gravity + addGravityVector3;
+            //Debug.Log(Physics.gravity);
+            addGravityOnce = false;
         }
 
 
     }
 
-    public void subtractYGravity()
+    public void subtractGravity()
     {
-        if (ACTIVATE_subtractYGravity)
+        if (subtractGravityOnce)
         {
-            Physics.gravity = Physics.gravity - subtractY;
-            latestGravity = Physics.gravity;
-            Debug.Log(Physics.gravity);
+            Physics.gravity = Physics.gravity - subtractGravityVector3;
+            //Debug.Log(Physics.gravity);
+            subtractGravityOnce = false;
         }
     }
-    
+
+    void FixedUpdate()
+    {
+        // we want to be able to keep tabs on the latest gravity value
+        latestGravity = Physics.gravity;
+    }
+
     //    // this vector3 will be applied to all bodies in the scene
     //    public Vector3 vector3_Gravity_Value_To_Set { get; set; }
     //

@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-public class GRAVITY_subContainer : ITickable
+public class GRAVITY_subContainer : ILateTickable
 {
     readonly GRAVITY_ gravityReference;
 
@@ -9,9 +9,9 @@ public class GRAVITY_subContainer : ITickable
         gravityReference = injectedGravityValue;
     }
     
-    public void Tick()
+    public void LateTick()
     {
-        gravityReference.addYGravity();
-        gravityReference.subtractYGravity();
+        gravityReference.addGravity();
+        gravityReference.subtractGravity();
     }
 }
