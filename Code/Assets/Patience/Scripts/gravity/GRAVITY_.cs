@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class GRAVITY_ : MonoBehaviour {
+    // we'll use these variables to trigger changes to our environment
+    // GRAVITY_subContainer is able to create an instance of GRAVITY_ with zenject and executes two methods
+
     public bool addGravityOnce;
     public Vector3 addGravityVector3;
 
@@ -11,13 +14,13 @@ public class GRAVITY_ : MonoBehaviour {
     public Vector3 latestGravity;
 
     public void addValueChanged(bool toggleValue) {
-        Debug.Log(" ... : addValueChanged : " + toggleValue);
+        //Debug.Log(" ... : GRAVITY_ : addValueChanged : " + toggleValue);
         addGravityOnce = toggleValue;
     }
 
     public void subtractValueChanged(bool toggleValue)
     {
-        Debug.Log(" ... : subtractValueChanged : " + toggleValue);
+        //Debug.Log(" ... : GRAVITY_ : subtractValueChanged : " + toggleValue);
         subtractGravityOnce = toggleValue;
     }
 
@@ -47,14 +50,5 @@ public class GRAVITY_ : MonoBehaviour {
         // we want to be able to keep tabs on the latest gravity value
         latestGravity = Physics.gravity;
     }
-
-    //    // this vector3 will be applied to all bodies in the scene
-    //    public Vector3 vector3_Gravity_Value_To_Set { get; set; }
-    //
-    //    // this function will reset gravity to 0,0,0, then apply 'new_Vector3_Gravity_Value_To_Set'
-    //    public void reset_To_Zero_Gravity() {
-    //        Physics.gravity = new Vector3(0,0,0) + vector3_Gravity_Value_To_Set;
-    //        //Debug.Log(Physics.gravity);
-    //
 }
 

@@ -107,7 +107,7 @@ public class rayCastTool : MonoBehaviour
             if (Physics.Raycast(RAY_cameraToMousePosition, out HIT_cameraToMousePosition, INT_raycastDistanceMax))
             {
                 //Debug.DrawLine(RAY_cameraToMousePosition.origin, HIT_cameraToMousePosition.point);
-                Debug.Log(HIT_cameraToMousePosition.transform.name);
+                //Debug.Log(HIT_cameraToMousePosition.transform.name);
 
                 Instantiate(ACTIVE_rayCastPoint_Particle, (HIT_cameraToMousePosition.point + VECTOR3_spawnDistance), transform.rotation);
             }
