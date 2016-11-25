@@ -44,11 +44,11 @@ public class GRAVITY_ : MonoBehaviour {
 
     public void FixedUpdate() {
         if (Input.GetKey(KeyCode.R)) {
-            toggleAddGravityOnce(true);
-        }
-
-        if (Input.GetKey(KeyCode.F)) {
             toggleSubtractGravityOnce(true);
+        }
+        
+        if (Input.GetKey(KeyCode.F)) {
+            toggleAddGravityOnce(true);
         }
 
         if (Input.GetKey(KeyCode.V)) {
