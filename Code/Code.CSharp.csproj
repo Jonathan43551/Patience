@@ -82,16 +82,11 @@
     <Compile Include="Assets\Patience\Scripts\Interfaces\PRUNING.cs" />
     <Compile Include="Assets\Patience\Scripts\Interfaces\PRUNING_INTERFACE.cs" />
     <Compile Include="Assets\Patience\Scripts\ObjectBuilderScript.cs" />
-    <Compile Include="Assets\Patience\Scripts\Zenject_Scripts\GameInstaller.cs" />
-    <Compile Include="Assets\Patience\Scripts\Zenject_Scripts\GameRunner.cs" />
-    <Compile Include="Assets\Patience\Scripts\Zenject_Scripts\Ship.cs" />
-    <Compile Include="Assets\Patience\Scripts\Zenject_Scripts\ShipHealthHandler.cs" />
-    <Compile Include="Assets\Patience\Scripts\Zenject_Scripts\ShipInputHandler.cs" />
+    <Compile Include="Assets\Patience\Scripts\POSITION.cs" />
+    <Compile Include="Assets\Patience\Scripts\POSITION_INTERFACE.cs" />
     <Compile Include="Assets\Patience\Scripts\activation.cs" />
     <Compile Include="Assets\Patience\Scripts\camera\CAMERA_.cs" />
     <Compile Include="Assets\Patience\Scripts\camera\CAMERA_subContainer.cs" />
-    <Compile Include="Assets\Patience\Scripts\camera\POSITION.cs" />
-    <Compile Include="Assets\Patience\Scripts\camera\POSITION_INTERFACE.cs" />
     <Compile Include="Assets\Patience\Scripts\camera\zenject_CAMERA_.cs" />
     <Compile Include="Assets\Patience\Scripts\cameraMovement.cs" />
     <Compile Include="Assets\Patience\Scripts\exitButton.cs" />
@@ -101,6 +96,7 @@
     <Compile Include="Assets\Patience\Scripts\gravity\zenject_GRAVITY_.cs" />
     <Compile Include="Assets\Patience\Scripts\rayCastTool.cs" />
     <Compile Include="Assets\Patience\Scripts\systemMovement.cs" />
+    <Compile Include="Assets\Patience\Scripts\table\TABLE_.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\BindInfo\BindInfo.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\BindInfo\GameObjectCreationParameters.cs" />
     <Compile Include="Assets\Zenject\Source\Binding\Binders\ArgumentsBinder.cs" />
