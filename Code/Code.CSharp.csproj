@@ -73,15 +73,8 @@
     <Compile Include="Assets\Patience\Scripts\AnchorController.cs" />
     <Compile Include="Assets\Patience\Scripts\BouyLogic.cs" />
     <Compile Include="Assets\Patience\Scripts\EditorController.cs" />
-    <Compile Include="Assets\Patience\Scripts\HexCell.cs" />
-    <Compile Include="Assets\Patience\Scripts\HexCoordinates.cs" />
-    <Compile Include="Assets\Patience\Scripts\HexGrid.cs" />
-    <Compile Include="Assets\Patience\Scripts\HexMapEditor.cs" />
-    <Compile Include="Assets\Patience\Scripts\HexMesh.cs" />
-    <Compile Include="Assets\Patience\Scripts\HexMetrics.cs" />
     <Compile Include="Assets\Patience\Scripts\Interfaces\PRUNING.cs" />
     <Compile Include="Assets\Patience\Scripts\Interfaces\PRUNING_INTERFACE.cs" />
-    <Compile Include="Assets\Patience\Scripts\ObjectBuilderScript.cs" />
     <Compile Include="Assets\Patience\Scripts\POSITION.cs" />
     <Compile Include="Assets\Patience\Scripts\POSITION_INTERFACE.cs" />
     <Compile Include="Assets\Patience\Scripts\activation.cs" />

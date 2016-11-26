@@ -114,7 +114,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Patience\Scripts\Editor\HexCoordinatesDrawer.cs" />
     <Compile Include="Assets\Zenject\Source\Editor\EditorWindow\GuiRenderableManager.cs" />
     <Compile Include="Assets\Zenject\Source\Editor\EditorWindow\IGuiRenderable.cs" />
     <Compile Include="Assets\Zenject\Source\Editor\EditorWindow\ZenjectEditorWindow.cs" />
