@@ -11,6 +11,10 @@ public class CAMERA_subContainer : ITickable
 
     public void Tick()
     {
+        cameraReference.button_home_CameraPosition0();
+        cameraReference.button_home_CameraPosition1();
+        cameraReference.button_home_CameraPosition2();
+
         cameraReference.checkVectorFromSelf();
     }
 }
