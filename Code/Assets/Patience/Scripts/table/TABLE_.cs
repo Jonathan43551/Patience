@@ -4,7 +4,7 @@ using System.Collections;
 public class TABLE_ : MonoBehaviour {
 
     [SerializeField]
-    float slideSpeed = 2;
+    float slideSpeed = 15;
 
     [SerializeField]
     Vector3 tableHome;

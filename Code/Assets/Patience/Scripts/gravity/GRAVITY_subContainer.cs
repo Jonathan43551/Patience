@@ -11,7 +11,7 @@ public class GRAVITY_subContainer : ILateTickable
     
     public void LateTick()
     {
-        gravityReference.addGravity();
-        gravityReference.subtractGravity();
+        //gravityReference.addGravity();
+        //gravityReference.subtractGravity();
     }
 }
