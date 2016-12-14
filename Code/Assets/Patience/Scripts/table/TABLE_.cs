@@ -9,7 +9,7 @@ public class TABLE_ : MonoBehaviour {
     [SerializeField]
     Vector3 tableHome;
 
-    public void FixedUpdate() {
+    public void FUNCTION_checkForInput() {
         if (Input.GetKey(KeyCode.UpArrow)) {
             this.transform.position += Vector3.forward * slideSpeed * Time.deltaTime;
         }

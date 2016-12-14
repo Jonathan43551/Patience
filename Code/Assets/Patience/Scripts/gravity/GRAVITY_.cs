@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Zenject;
 
 // [Hard Dance] - Stonebank - Be Alright (feat. EMEL) [Monstercat Release] 
@@ -14,27 +13,31 @@ public class GRAVITY_ : MonoBehaviour {
     public Vector3 zeroedGravity;
 
     // Physics.gravity changes will be applied to all game objects in the scene that have a rigidbody with gravity enabled
-    public void addGravity() {
-        Physics.gravity = Physics.gravity + addGravityVector3;
-    }
-
     public void subtractGravity() {
         Physics.gravity = Physics.gravity - subtractGravityVector3;
     }
+    
+    public void zeroGravity() {
+        Physics.gravity = zeroedGravity;
+    }
 
-    public void FixedUpdate() {
+    public void addGravity() {
+        Physics.gravity = Physics.gravity + addGravityVector3;
+    } 
+
+    public void FUNCTION_checkForInput() {
         if (Input.GetKey(KeyCode.R)) {
             subtractGravity();
-        }        
+        }
 
         if (Input.GetKey(KeyCode.F)) { // neutralize gravity
-            Physics.gravity = zeroedGravity;
+            zeroGravity();
         }
 
         if (Input.GetKey(KeyCode.V)) {
             addGravity();
         }
-        
+
         // we want record the latest gravity value
         latestGravity = Physics.gravity;
     }

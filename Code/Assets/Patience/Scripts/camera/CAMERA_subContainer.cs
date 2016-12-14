@@ -1,20 +1,17 @@
 ﻿using Zenject;
 
-public class CAMERA_subContainer : ITickable
-{
+public class CAMERA_subContainer : ITickable {
     readonly CAMERA_ cameraReference;
+    readonly FORGE_ forgeReference;
 
-    public CAMERA_subContainer(CAMERA_ injectedCameraValue)
-    {
+    public CAMERA_subContainer(FORGE_ injectedForgeReference, CAMERA_ injectedCameraValue) {
+        forgeReference = injectedForgeReference;
         cameraReference = injectedCameraValue;
     }
 
-    public void Tick()
-    {
-        cameraReference.button_home_CameraPosition0();
-        cameraReference.button_home_CameraPosition1();
-        cameraReference.button_home_CameraPosition2();
+    public void Tick() {
+        cameraReference.FUNCTION_checkVectorFromSelf();
 
-        cameraReference.checkVectorFromSelf();
+        cameraReference.FUNCTION_checkMouseInput(forgeReference);
     }
 }
