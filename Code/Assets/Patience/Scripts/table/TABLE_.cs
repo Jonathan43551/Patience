@@ -7,7 +7,7 @@ public class TABLE_ : MonoBehaviour {
     float slideSpeed = 15;
 
     [SerializeField]
-    Vector3 tableHome;
+    Vector3 tableHome = new Vector3(0, 0, 0);
 
     public void FUNCTION_checkForInput() {
         if (Input.GetKey(KeyCode.UpArrow)) {

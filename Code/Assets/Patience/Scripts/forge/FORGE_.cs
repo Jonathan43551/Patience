@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class FORGE_ : MonoBehaviour { 
     // FUNCTION_triageWithCOSMO
@@ -27,7 +28,11 @@ public class FORGE_ : MonoBehaviour {
         }
         //Debug.Log(ACTIVE_FORGE_Mode_);
     }
-    
+
+    internal void FUNCTION_assignVECTOR3Manager(VECTOR3_MANAGER_ vector3ManagerReference) {
+        Debug.Log(" forge_ : vector3manager assigned: " + vector3ManagerReference.name);
+    }
+
     // FUNCTION_switchOption<identifier>
     public Rigidbody ACTIVE_FORGE_Rigidbody_;
 
