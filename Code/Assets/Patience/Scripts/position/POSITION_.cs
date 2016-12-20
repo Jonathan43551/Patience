@@ -3,6 +3,7 @@ using System.Collections;
 using Zenject;
 
 public class POSITION_ : MonoBehaviour {
+    [Inject]
     VECTOR3_MANAGER_ vector3ManagerReference;
 
     // this script will work alongside ANCHOR_ to help with management of anchors in space
@@ -19,6 +20,7 @@ public class POSITION_ : MonoBehaviour {
 
     public void FUNCTION_assignVector3Manager(VECTOR3_MANAGER_ vector3Manager) {
         vector3ManagerReference = vector3Manager;
+        Debug.Log(" ^v^v position_ : assignVector3Manager: " + vector3Manager.name);
     }
 
 
@@ -27,11 +29,11 @@ public class POSITION_ : MonoBehaviour {
         Debug.Log(" ^v^v position_ : reportToVECTOR3manager: " + gameObject.transform.position);
     }
 
-    public void Awake() {
-        Debug.Log(" .. position_ : vector3ManagerReference: " + vector3ManagerReference);
-        if (Input.GetKey(KeyCode.C)) {
-            FUNCTION_sendPositionAndGameObjectToVECTOR3manager();
-        }
-    }
+  // public void Awake() {
+  //     Debug.Log(" .. position_ : vector3ManagerReference: " + vector3ManagerReference);
+  //     if (Input.GetKey(KeyCode.C)) {
+  //         FUNCTION_sendPositionAndGameObjectToVECTOR3manager();
+  //     }
+  // }
 }
 
