@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
 public class FORGE_ : MonoBehaviour { 
     // FUNCTION_triageWithCOSMO
@@ -29,9 +30,7 @@ public class FORGE_ : MonoBehaviour {
         //Debug.Log(ACTIVE_FORGE_Mode_);
     }
 
-    internal void FUNCTION_assignVECTOR3Manager(VECTOR3_MANAGER_ vector3ManagerReference) {
-        Debug.Log(" forge_ : vector3manager assigned: " + vector3ManagerReference.name);
-    }
+
 
     // FUNCTION_switchOption<identifier>
     public Rigidbody ACTIVE_FORGE_Rigidbody_;
@@ -52,9 +51,21 @@ public class FORGE_ : MonoBehaviour {
         ACTIVE_FORGE_Rigidbody_ = _Rigidbody_OptionGreen;
     }
 
+
+    [Inject]
+    readonly VECTOR3_MANAGER_ vector3ManagerReference;
+
+    internal void FUNCTION_sendObjectToVECTOR3Manager(object instantiatedObject) {
+        vector3ManagerReference.FUNCTION_triageInstantiatedObject(instantiatedObject);
+    }
+
+
+
+
     // FUNCTION_generateRigidbody
     public void FUNCTION_generateRigidbody(Vector3 forgeGenerationPoint) {
-        Instantiate(ACTIVE_FORGE_Rigidbody_, (forgeGenerationPoint), transform.rotation);
+        object instantiatedObject = Instantiate(ACTIVE_FORGE_Rigidbody_, (forgeGenerationPoint), transform.rotation);
+        FUNCTION_sendObjectToVECTOR3Manager(instantiatedObject);
     }
     
     public void FUNCTION_checkForInput() {

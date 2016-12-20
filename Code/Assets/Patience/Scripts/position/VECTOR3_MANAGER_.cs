@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class VECTOR3_MANAGER_ : MonoBehaviour {
 
@@ -25,8 +26,11 @@ public class VECTOR3_MANAGER_ : MonoBehaviour {
     public void FUNCTION_reportVectorInformation(Vector3 vector, GameObject objectToIdentify) {
         if (active_Manager_Mode.Equals(active_Mode_Options.anchor)) {
             // objectToIdentify.transform.position;
-
+            //FUNCTION_reportVectorInformation
+            Debug.Log(" _^^_ : VECTOR3_MANAGER_ : reportVectorInformation | anchor : " + vector);
+            //objectToIdentify.POSI
         } else if (active_Manager_Mode.Equals(active_Mode_Options.link)) {
+            Debug.Log(" _^^_ : VECTOR3_MANAGER_ : reportVectorInformation | link : " + vector);
 
         }
 
@@ -41,5 +45,20 @@ public class VECTOR3_MANAGER_ : MonoBehaviour {
         //       string postName = replacecomma.Replace(" ", "");
         //       this.gameObject.name = "Anchor-" + postName;
         //   }
+    }
+
+
+
+    public void FUNCTION_ask_For_Position_and_GameObject() {
+        // anchor factory. FUNCTION_sendPosition_and_GameObject_To_VECTOR3manager()
+    }
+
+    internal void FUNCTION_triageInstantiatedObject(object instantiatedObject) {
+        Debug.Log(" _^^_ : VECTOR3_MANAGER_ : triageInstantiatedObject : " + instantiatedObject);
+     
+
+        // https://github.com/modesttree/Zenject/blob/master/Documentation/SubContainers.md#creating-game-object-contexts-dynamically-with-parameters
+        // i want to use a zenject factory, i think this could possibly maybe work
+        // i want to pass the new object to the factory so it creates a tracking object reference in the factory
     }
 }

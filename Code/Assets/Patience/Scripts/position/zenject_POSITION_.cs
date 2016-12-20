@@ -1,15 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Zenject;
 
-public class zenject_POSITION_ : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class zenject_POSITION_ : MonoInstaller {
+    public override void InstallBindings() {
+        Container.BindAllInterfaces<POSITION_subContainer>().To<POSITION_subContainer>().AsSingle();
+    }
 }

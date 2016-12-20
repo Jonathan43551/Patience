@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-public class VECTOR3_MANAGER_subContainer : IInitializable {
+public class VECTOR3_MANAGER_subContainer : ITickable {
     readonly VECTOR3_MANAGER_ vector3ManagerReference;
     readonly CAMERA_ cameraReference;
     readonly FORGE_ forgeReference;
@@ -12,11 +12,10 @@ public class VECTOR3_MANAGER_subContainer : IInitializable {
         cameraReference = injectedCameraValue;
     }
 
-    public void Initialize() {
+    public void Tick() {
         // https://github.com/modesttree/Zenject#iinitializable-and-postinject
-        //cameraReference.FUNCTION_checkVectorFromSelf();
-        //cameraReference.FUNCTION_checkMouseInput(forgeReference);
+        vector3ManagerReference.FUNCTION_ask_For_Position_and_GameObject();
+        ////vector3ManagerReference.FUNCTION_checkMouseInput(forgeReference);
 
-        forgeReference.FUNCTION_assignVECTOR3Manager(vector3ManagerReference);
     }
 }
