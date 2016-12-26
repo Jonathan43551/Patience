@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Zenject;
 
 public class VECTOR3_MANAGER_ : MonoBehaviour {
 
@@ -23,11 +24,17 @@ public class VECTOR3_MANAGER_ : MonoBehaviour {
         active_Manager_Mode = active_Mode_Options.link;
     }
 
+    [Inject]
+    [SerializeField]
+    POSITION_ positionReference;
+
+
     public void FUNCTION_reportVectorInformation(Vector3 vector, GameObject objectToIdentify) {
         if (active_Manager_Mode.Equals(active_Mode_Options.anchor)) {
             // objectToIdentify.transform.position;
             //FUNCTION_reportVectorInformation
             Debug.Log(" _^^_ : VECTOR3_MANAGER_ : reportVectorInformation | anchor : " + vector);
+            
             //objectToIdentify.POSI
         } else if (active_Manager_Mode.Equals(active_Mode_Options.link)) {
             Debug.Log(" _^^_ : VECTOR3_MANAGER_ : reportVectorInformation | link : " + vector);
@@ -51,6 +58,7 @@ public class VECTOR3_MANAGER_ : MonoBehaviour {
 
     public void FUNCTION_ask_For_Position_and_GameObject() {
         // anchor factory. FUNCTION_sendPosition_and_GameObject_To_VECTOR3manager()
+        positionReference.FUNCTION_sendPositionAndGameObjectToVECTOR3manager();
     }
 
     internal void FUNCTION_triageInstantiatedObject(object instantiatedObject) {

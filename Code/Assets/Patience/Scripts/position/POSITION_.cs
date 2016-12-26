@@ -3,8 +3,10 @@ using System.Collections;
 using Zenject;
 
 public class POSITION_ : MonoBehaviour {
+    [SerializeField]
     [Inject]
     VECTOR3_MANAGER_ vector3ManagerReference;
+    
 
     // this script will work alongside ANCHOR_ to help with management of anchors in space
     // https://en.wikipedia.org/wiki/Mooring_(watercraft)
@@ -25,7 +27,7 @@ public class POSITION_ : MonoBehaviour {
 
 
 	public void FUNCTION_sendPositionAndGameObjectToVECTOR3manager() {
-        vector3ManagerReference.FUNCTION_reportVectorInformation( gameObject.transform.position, gameObject );
+        vector3ManagerReference.FUNCTION_reportVectorInformation( gameObject.transform.position, gameObject);
         Debug.Log(" ^v^v position_ : reportToVECTOR3manager: " + gameObject.transform.position);
     }
 
