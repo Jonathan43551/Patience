@@ -29,7 +29,7 @@ public class systemMovement : MonoBehaviour {
 
     public void BooleanRotationxV3(bool plzRotateV3) {
         //Debug.Log(" _ _ : systemMovement : BooleanRotationxV3 : " + plzRotateV3);
-        plzRotatex3= plzRotateV3;
+        plzRotatex3 = plzRotateV3;
     }
 
     // Update is called once per frame
