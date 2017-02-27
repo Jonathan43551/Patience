@@ -4,6 +4,8 @@ using System;
 using Zenject;
 
 public class VECTOR3_MANAGER_ : MonoBehaviour {
+    FORGE_ forgeReference;
+    CAMERA_ cameraReference;
 
     // active_Mode_Options
     public enum active_Mode_Options {
@@ -23,11 +25,6 @@ public class VECTOR3_MANAGER_ : MonoBehaviour {
         // link     - add/remove polygonlinks
         active_Manager_Mode = active_Mode_Options.link;
     }
-
-    [Inject]
-    [SerializeField]
-    POSITION_ positionReference;
-
 
     public void FUNCTION_reportVectorInformation(Vector3 vector, GameObject objectToIdentify) {
         if (active_Manager_Mode.Equals(active_Mode_Options.anchor)) {
@@ -54,12 +51,18 @@ public class VECTOR3_MANAGER_ : MonoBehaviour {
         //   }
     }
 
-
-
-    public void FUNCTION_ask_For_Position_and_GameObject() {
-        // anchor factory. FUNCTION_sendPosition_and_GameObject_To_VECTOR3manager()
-        positionReference.FUNCTION_sendPositionAndGameObjectToVECTOR3manager();
+    internal void assignCAMERA_and_FORGE_(CAMERA_ injectedCameraReference, FORGE_ injectedForgeReference) {
+        cameraReference = injectedCameraReference;
+        forgeReference = injectedForgeReference;
     }
+
+
+
+
+    //   public void FUNCTION_ask_For_Position_and_GameObject() {
+    //       // anchor factory. FUNCTION_sendPosition_and_GameObject_To_VECTOR3manager()
+    //       positionReference.FUNCTION_sendPositionAndGameObjectToVECTOR3manager();
+    //   }
 
     internal void FUNCTION_triageInstantiatedObject(object instantiatedObject) {
         Debug.Log(" _^^_ : VECTOR3_MANAGER_ : triageInstantiatedObject : " + instantiatedObject);

@@ -94,6 +94,8 @@ public class CAMERA_ : MonoBehaviour {
     }
 
     public int FORGE_generateDistanceMaximum = 200;
+    private int spawnTimeDelay;
+
 
     public void FUNCTION_checkMouseInput(FORGE_ forgeReference) {
         if (Input.GetMouseButton(0)) {
@@ -105,10 +107,23 @@ public class CAMERA_ : MonoBehaviour {
             RaycastHit HIT_cameraToMousePosition;
 
 
-            if (Physics.Raycast(RAY_cameraToMousePosition, out HIT_cameraToMousePosition, FORGE_generateDistanceMaximum)) {
 
-                Debug.DrawLine(RAY_cameraToMousePosition.origin, HIT_cameraToMousePosition.point);
+            if (Physics.Raycast(RAY_cameraToMousePosition, out HIT_cameraToMousePosition, FORGE_generateDistanceMaximum) && (spawnTimeDelay == 0)) {
+
+                //Debug.DrawLine(RAY_cameraToMousePosition.origin, HIT_cameraToMousePosition.point);
                 forgeReference.FUNCTION_generateRigidbody(HIT_cameraToMousePosition.point);
+                //forgeReference.FUNCTION_generateRigidbody(HIT_cameraToMousePosition.point + Vector3.forward);
+                //forgeReference.FUNCTION_generateRigidbody(HIT_cameraToMousePosition.point + Vector3.back);
+                //forgeReference.FUNCTION_generateRigidbody(HIT_cameraToMousePosition.point + Vector3.left);
+                //forgeReference.FUNCTION_generateRigidbody(HIT_cameraToMousePosition.point + Vector3.right);
+
+                spawnTimeDelay += 5;
+
+
+            }
+        } else {
+            if(spawnTimeDelay >= 1) {
+                spawnTimeDelay--;
             }
         }
     }   

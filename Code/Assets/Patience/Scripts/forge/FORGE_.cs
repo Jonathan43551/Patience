@@ -3,15 +3,6 @@ using UnityEngine;
 using Zenject;
 
 public class FORGE_ : MonoBehaviour { 
-    // FUNCTION_triageWithCOSMO
-    public int worldIdentifier = -509;
-    public int transactionIdentifier = -500000;
-    public void FUNCTION_triageWithCOSMO(string objectLocationTriageWithCOSMO)
-    {
-        Debug.Log(worldIdentifier + "^" + transactionIdentifier + objectLocationTriageWithCOSMO);
-        transactionIdentifier++;
-    }
-    
     // FUNCTION_switchFORGE_Mode
     public enum ACTIVE_FORGE_Mode_Options
     {
@@ -27,61 +18,54 @@ public class FORGE_ : MonoBehaviour {
         } else {
             ACTIVE_FORGE_Mode_ = ACTIVE_FORGE_Mode_Options.anchor;
         }
-        //Debug.Log(ACTIVE_FORGE_Mode_);
     }
 
+    public Rigidbody[] _RigidBody_Options;
 
-
-    // FUNCTION_switchOption<identifier>
-    public Rigidbody ACTIVE_FORGE_Rigidbody_;
-
-    public Rigidbody _Rigidbody_OptionYellow;
-    public Rigidbody _Rigidbody_OptionBlue;
-    public Rigidbody _Rigidbody_OptionGreen;
-
-    public void FUNCTION_switchOptionYellow() {
-        ACTIVE_FORGE_Rigidbody_ = _Rigidbody_OptionYellow;
-    }
-
-    public void FUNCTION_switchOptionBlue() {
-        ACTIVE_FORGE_Rigidbody_ = _Rigidbody_OptionBlue;
-    }
-
-    public void FUNCTION_switchOptionGreen() {
-        ACTIVE_FORGE_Rigidbody_ = _Rigidbody_OptionGreen;
-    }
-
-
-    [Inject]
-    readonly VECTOR3_MANAGER_ vector3ManagerReference;
-
-    internal void FUNCTION_sendObjectToVECTOR3Manager(object instantiatedObject) {
-        vector3ManagerReference.FUNCTION_triageInstantiatedObject(instantiatedObject);
-    }
-
+    private int _RigidBody_Counter = 0;
+    private int _RigidBody_CycleCounter = 0;
 
 
 
     // FUNCTION_generateRigidbody
     public void FUNCTION_generateRigidbody(Vector3 forgeGenerationPoint) {
-        object instantiatedObject = Instantiate(ACTIVE_FORGE_Rigidbody_, (forgeGenerationPoint), transform.rotation);
-        FUNCTION_sendObjectToVECTOR3Manager(instantiatedObject);
+        if (_RigidBody_Counter < _RigidBody_Options.Length - 1 ) {
+            _RigidBody_Counter++;
+            Debug.Log("FUNCTION_generateRigidbody :_RigidBody_Counter " + _RigidBody_Counter);
+            object instantiatedObject = Instantiate(_RigidBody_Options[_RigidBody_CycleCounter], (forgeGenerationPoint), transform.rotation);
+           
+            Debug.Log("IF" + _RigidBody_CycleCounter);
+        } else {
+            _RigidBody_Counter = 0;
+            object instantiatedObject = Instantiate(_RigidBody_Options[_RigidBody_CycleCounter], (forgeGenerationPoint), transform.rotation);
+            Debug.Log("FUNCTION_generateRigidbody : _RigidBody_Options[ " + _RigidBody_CycleCounter + "]");
+            
+            Debug.Log("ELSE" + _RigidBody_CycleCounter);
+            if(_RigidBody_CycleCounter < _RigidBody_Options.Length - 1) {
+                _RigidBody_CycleCounter++;
+            } else {
+                _RigidBody_CycleCounter = 0;
+            }
+            
+
+        }
     }
-    
+
+    public Vector3 U_generateBlock;
+    public Vector3 J_generateBlock;
+    public Vector3 M_generateBlock;
+
     public void FUNCTION_checkForInput() {
-        if (Input.GetKey(KeyCode.U)) { // OptionYellow
-            FUNCTION_switchOptionYellow();
-            FUNCTION_generateRigidbody(new Vector3(transform.position.x,transform.position.y,transform.position.z));
-        }
-
-        if (Input.GetKey(KeyCode.J)) { // OptionBlue
-            FUNCTION_switchOptionBlue();
-            FUNCTION_generateRigidbody(new Vector3(transform.position.x, transform.position.y, transform.position.z));
-        }
-
-        if (Input.GetKey(KeyCode.M)) { // OptionGreen
-            FUNCTION_switchOptionGreen();
-            FUNCTION_generateRigidbody(new Vector3(transform.position.x, transform.position.y, transform.position.z));
-        }
+       if (Input.GetKey(KeyCode.U)) {
+           FUNCTION_generateRigidbody(U_generateBlock);
+       }
+       
+       if (Input.GetKey(KeyCode.J)) {
+           FUNCTION_generateRigidbody(J_generateBlock);
+       }
+       
+       if (Input.GetKey(KeyCode.M)) {
+           FUNCTION_generateRigidbody(M_generateBlock);
+       }
     }
 }

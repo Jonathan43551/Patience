@@ -3,7 +3,6 @@ using System.Collections;
 using Zenject;
 
 public class POSITION_ : MonoBehaviour {
-    [SerializeField]
     [Inject]
     VECTOR3_MANAGER_ vector3ManagerReference;
     
