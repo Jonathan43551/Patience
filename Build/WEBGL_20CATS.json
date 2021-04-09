@@ -1,0 +1,13 @@
+{
+"companyName": "Thesaurus4screens",
+"productName": "Patience",
+"dataUrl": "WEBGL_20CATS.data.unityweb",
+"asmCodeUrl": "WEBGL_20CATS.asm.code.unityweb",
+"asmMemoryUrl": "WEBGL_20CATS.asm.memory.unityweb",
+"asmFrameworkUrl": "WEBGL_20CATS.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
